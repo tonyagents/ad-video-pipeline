@@ -1,0 +1,27 @@
+# Dependencies (incl. nested, e.g. ad-poker-trainer/node_modules)
+node_modules/
+
+# Build caches
+.next/
+dist/
+build/
+.turbo/
+*.tsbuildinfo
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# OS / logs
+.DS_Store
+*.log
+npm-debug.log*
+
+# NOTE: rendered videos in out/ are intentionally committed (the showcase deliverables)

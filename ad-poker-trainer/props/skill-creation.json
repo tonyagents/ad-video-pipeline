@@ -1,0 +1,45 @@
+{
+  "style": "mercury",
+  "hook": {
+    "image": "sc-hook.png",
+    "title": "Don't pick a skill. Design one.",
+    "sub": "what skills can i create as a daily trader?",
+    "duration": 140
+  },
+  "scenes": [
+    {
+      "img": "sc-menu.png",
+      "kicker": "Skill design",
+      "caption": "It maps skills\nto your edge.",
+      "sub": "PM arb scout, sports edge finder, portfolio tracker — tailored to how you trade.",
+      "focusY": "50%",
+      "duration": 125
+    },
+    {
+      "img": "sc-auto.png",
+      "kicker": "Discipline + automation",
+      "caption": "And the guardrails\nto run them.",
+      "sub": "Budget watchdog, reasoning checks, DCA & stop-loss bots.",
+      "focusY": "50%",
+      "duration": 120
+    },
+    {
+      "img": "sc-leaderboard.png",
+      "kicker": "Skill, running",
+      "caption": "Then it ships\nthe real thing.",
+      "sub": "A live smart-money leaderboard — built and running on command.",
+      "focusY": "42%",
+      "duration": 125
+    }
+  ],
+  "endCard": {
+    "logo": "moonpay-logo-white-on-purple.png",
+    "title": "Build your edge.",
+    "brand": "MoonAgents",
+    "tagline": "The AI agent in your MoonPay wallet",
+    "url": "moonpay.com/agents",
+    "disclaimer": "Informational only, not financial advice. You trade at your own risk.",
+    "duration": 110
+  },
+  "music": "music-skill.wav"
+}

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>AI Ads Pipeline — Submission Deck</title>
+<style>
+  @page { size: 1280px 720px; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #08070c; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+    color: #f5f3ff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  section {
+    position: relative;
+    width: 1280px;
+    height: 720px;
+    overflow: hidden;
+    page-break-after: always;
+    background: #08070c;
+  }
+  .glow {
+    position: absolute;
+    width: 1100px; height: 1100px;
+    background: radial-gradient(circle, rgba(139,92,246,0.18) 0%, rgba(139,92,246,0) 60%);
+    pointer-events: none;
+  }
+  .kicker {
+    font-size: 16px; font-weight: 700; color: #a78bfa;
+    letter-spacing: 4px; text-transform: uppercase; margin-bottom: 16px;
+  }
+  h1 { font-size: 72px; font-weight: 800; letter-spacing: -2.5px; line-height: 1.04; }
+  h2 { font-size: 48px; font-weight: 800; letter-spacing: -1.5px; line-height: 1.06; }
+  .sub { font-size: 22px; font-weight: 500; color: #9d9aa8; line-height: 1.45; }
+  .pad { padding: 64px 80px; position: relative; height: 100%; }
+  .foot {
+    position: absolute; bottom: 28px; left: 80px; right: 80px;
+    display: flex; justify-content: space-between;
+    font-size: 13px; font-weight: 600; color: #55525e; letter-spacing: 1px;
+  }
+  .shot {
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.10);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.6), 0 0 60px rgba(139,92,246,0.12);
+  }
+  .pill {
+    display: inline-block; padding: 12px 34px; border-radius: 999px;
+    border: 2px solid #8B5CF6; background: rgba(139,92,246,0.14);
+    font-size: 24px; font-weight: 700;
+  }
+  .card {
+    background: rgba(18,14,30,0.92);
+    border: 1.5px solid rgba(167,139,250,0.25);
+    border-radius: 18px; padding: 26px 28px;
+  }
+  .step-num { font-size: 15px; font-weight: 800; color: #a78bfa; letter-spacing: 2px; margin-bottom: 10px; }
+  .green { color: #16c784; }
+  .purple { color: #a78bfa; }
+  .mono { font-family: 'SF Mono', Menlo, monospace; font-size: 16px; color: #cdb7ff; }
+</style>
+</head>
+<body>
+
+<!-- 1 · TITLE -->
+<section>
+  <div class="glow" style="left: 90px; top: -190px;"></div>
+  <div class="pad" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+    <div class="kicker">AI Submission · Marketing + Design (Otherlife)</div>
+    <h1 style="margin-top: 10px;">Screenshots in.<br/>Launch films out.</h1>
+    <div class="sub" style="margin-top: 28px; font-size: 25px; max-width: 860px;">
+      A code-only ad studio: Claude Code writes the story, builds the edit in React,
+      composes the score, renders the MP4 — and QA's its own frames.
+    </div>
+    <div class="sub" style="margin-top: 16px; font-size: 17px; letter-spacing: 2px; color: #6f6b7e;">
+      NO VIDEO EDITOR &nbsp;·&nbsp; NO STOCK FOOTAGE &nbsp;·&nbsp; NO MUSIC LICENSE &nbsp;·&nbsp; NO AGENCY
+    </div>
+  </div>
+  <div class="foot"><span>AI ADS PIPELINE</span><span>01</span></div>
+</section>
+
+<!-- 2 · PROBLEM -->
+<section>
+  <div class="glow" style="left: -400px; top: -300px;"></div>
+  <div class="pad">
+    <div class="kicker">The problem</div>
+    <h2>Every launch needs a video.<br/>Videos used to need a team.</h2>
+    <div style="display: flex; gap: 22px; margin-top: 50px;">
+      <div class="card" style="flex: 1;">
+        <div style="font-size: 21px; font-weight: 800;">Editor time</div>
+        <div class="sub" style="font-size: 17px; margin-top: 8px;">Timeline work, motion design, audio — days per cut, booked weeks out.</div>
+      </div>
+      <div class="card" style="flex: 1;">
+        <div style="font-size: 21px; font-weight: 800;">Agency turnaround</div>
+        <div class="sub" style="font-size: 17px; margin-top: 8px;">Briefs, rounds of feedback, invoices — for a 30-second product video.</div>
+      </div>
+      <div class="card" style="flex: 1;">
+        <div style="font-size: 21px; font-weight: 800;">Every variant is manual</div>
+        <div class="sub" style="font-size: 17px; margin-top: 8px;">A 9:16 cut, a copy tweak, a localization — each one re-opens the project.</div>
+      </div>
+    </div>
+    <div class="sub" style="margin-top: 48px; font-size: 24px;">
+      Meanwhile product ships weekly. <span style="color:#f5f3ff; font-weight:700;">Launch content is the bottleneck.</span>
+    </div>
+  </div>
+  <div class="foot"><span>AI ADS PIPELINE</span><span>02</span></div>
+</section>
+
+<!-- 3 · HOW IT WORKS -->
+<section>
+  <div class="glow" style="right: -350px; top: -250px; left: auto;"></div>
+  <div class="pad">
+    <div class="kicker">How it works</div>
+    <h2>The whole edit is code.</h2>
+    <div style="display: flex; gap: 18px; margin-top: 46px;">
+      <div class="card" style="flex: 1;">
+        <div class="step-num">01 · INPUT</div>
+        <div style="font-size: 19px; font-weight: 700;">Drop screenshots + one sentence</div>
+        <div class="sub" style="font-size: 16px; margin-top: 8px;">Raw captures, any size. Context like “launch video for the rebrand.”</div>
+      </div>
+      <div class="card" style="flex: 1;">
+        <div class="step-num">02 · STORY</div>
+        <div style="font-size: 19px; font-weight: 700;">Claude writes the narrative</div>
+        <div class="sub" style="font-size: 16px; margin-top: 8px;">Hook → scenes → end card. Mandatory PII pass: emails, wallet addresses, referral codes cropped or excluded.</div>
+      </div>
+      <div class="card" style="flex: 1;">
+        <div class="step-num">03 · EDIT</div>
+        <div style="font-size: 19px; font-weight: 700;">React, not a timeline</div>
+        <div class="sub" style="font-size: 16px; margin-top: 8px;">The edit is a Remotion composition — motion design as typed code.</div>
+      </div>
+      <div class="card" style="flex: 1;">
+        <div class="step-num">04 · SCORE</div>
+        <div style="font-size: 19px; font-weight: 700;">Music synthesized from scratch</div>
+        <div class="sub" style="font-size: 16px; margin-top: 8px;">Original UKG / deep-house generated in numpy, beat-matched to the cut. Zero licensing.</div>
+      </div>
+      <div class="card" style="flex: 1;">
+        <div class="step-num">05 · QA</div>
+        <div style="font-size: 19px; font-weight: 700;">It checks its own work</div>
+        <div class="sub" style="font-size: 16px; margin-top: 8px;">Claude extracts frames, looks at them, fixes visual bugs, re-renders.</div>
+      </div>
+    </div>
+    <div class="sub" style="margin-top: 44px; font-size: 21px;">
+      Output: 1080p MP4 in minutes. <span style="color:#f5f3ff; font-weight: 700;">Any variant — 9:16, new copy, new language — is a re-render.</span>
+    </div>
+  </div>
+  <div class="foot"><span>AI ADS PIPELINE</span><span>03</span></div>
+</section>
+
+<!-- 4 · CASE STUDY: MOONGATE -->
+<section>
+  <div class="glow" style="left: -350px; bottom: -400px; top: auto;"></div>
+  <div class="pad">
+    <div class="kicker">Case study · This week</div>
+    <h2>Moongate rebrand launch: 10 screenshots → 33s film.</h2>
+    <div style="display: flex; gap: 16px; margin-top: 42px;">
+      <img class="shot" src="img/still-pillars.jpg" style="width: 272px;" />
+      <img class="shot" src="img/still-hook.jpg" style="width: 272px;" />
+      <img class="shot" src="img/still-xstocks.jpg" style="width: 272px;" />
+      <img class="shot" src="img/still-end.jpg" style="width: 272px;" />
+    </div>
+    <div class="sub" style="margin-top: 38px; font-size: 20px;">
+      Input: raw 720px captures of the new app + “it’s an all-in-one trading app, launching now.”<br/>
+      Output: typographic hook → six browser-framed product scenes → branded end card, original score.
+      <span style="color:#f5f3ff; font-weight:700;">Two PII catches on the way in</span> (referral code, wallet QR) — excluded automatically.
+    </div>
+  </div>
+  <div class="foot"><span>AI ADS PIPELINE</span><span>04</span></div>
+</section>
+
+<!-- 5 · OUTPUT QUALITY -->
+<section>
+  <div class="glow" style="right: -350px; bottom: -400px; top: auto; left: auto;"></div>
+  <div class="pad">
+    <div style="display: flex; gap: 56px; align-items: center; height: 100%;">
+      <img class="shot" src="img/still-baskets.jpg" style="width: 720px;" />
+      <div style="width: 380px; flex-shrink: 0;">
+        <div class="kicker">Output quality</div>
+        <h2 style="font-size: 40px;">Brand-true motion design, no designer hours.</h2>
+        <div class="sub" style="margin-top: 18px; font-size: 19px;">
+          Kinetic captions, browser chrome, glows, Ken Burns moves and end-card systems — all generated, all consistent with brand color and type.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>AI ADS PIPELINE</span><span>05</span></div>
+</section>
+
+<!-- 6 · BEYOND SCREENSHOTS -->
+<section>
+  <div class="glow" style="left: -350px; top: -300px;"></div>
+  <div class="pad">
+    <div class="kicker">Beyond screenshots</div>
+    <h2>Zero assets? It draws the whole film.</h2>
+    <div style="display: flex; gap: 16px; margin-top: 42px;">
+      <img class="shot" src="img/still-mascot-mx.jpg" style="width: 368px;" />
+      <img class="shot" src="img/still-mascots.jpg" style="width: 368px;" />
+      <img class="shot" src="img/still-day.jpg" style="width: 368px;" />
+    </div>
+    <div class="sub" style="margin-top: 36px; font-size: 20px;">
+      These aren’t illustrations or stock — every character, city skyline and phone UI is
+      <span style="color:#f5f3ff; font-weight:700;"> hand-written SVG animated in code</span>:
+      World Cup mascot spot (Mexico City · LA · Toronto) and a “day in the life” narrative ad,
+      both made from a one-line prompt with no input assets at all.
+    </div>
+  </div>
+  <div class="foot"><span>AI ADS PIPELINE</span><span>06</span></div>
+</section>
+
+<!-- 7 · VALUE -->
+<section>
+  <div class="glow" style="right: -300px; top: -250px; left: auto;"></div>
+  <div class="pad">
+    <div class="kicker">The value</div>
+    <h2>Days of production → minutes of compute.</h2>
+    <div style="display: flex; gap: 22px; margin-top: 50px;">
+      <div class="card" style="flex: 1; text-align: center;">
+        <div style="font-size: 44px; font-weight: 800;" class="purple">5</div>
+        <div class="sub" style="font-size: 17px; margin-top: 6px;">launch-ready films produced this week</div>
+      </div>
+      <div class="card" style="flex: 1; text-align: center;">
+        <div style="font-size: 44px; font-weight: 800;" class="purple">~30 min</div>
+        <div class="sub" style="font-size: 17px; margin-top: 6px;">from screenshots to reviewed MP4, per film</div>
+      </div>
+      <div class="card" style="flex: 1; text-align: center;">
+        <div style="font-size: 44px; font-weight: 800;" class="purple">$0</div>
+        <div class="sub" style="font-size: 17px; margin-top: 6px;">external spend — no editor, agency, stock or music license</div>
+      </div>
+      <div class="card" style="flex: 1; text-align: center;">
+        <div style="font-size: 44px; font-weight: 800;" class="purple">∞</div>
+        <div class="sub" style="font-size: 17px; margin-top: 6px;">variants — formats, copy and languages are re-renders</div>
+      </div>
+    </div>
+    <div class="sub" style="margin-top: 46px; font-size: 21px;">
+      Built for Marketing + Design (Otherlife): <span style="color:#f5f3ff; font-weight:700;">every product or feature release can ship with a film</span> — the same day it ships.
+    </div>
+  </div>
+  <div class="foot"><span>AI ADS PIPELINE</span><span>07</span></div>
+</section>
+
+<!-- 8 · EVIDENCE -->
+<section>
+  <div class="glow" style="left: 90px; top: -100px;"></div>
+  <div class="pad" style="display: flex; flex-direction: column; justify-content: center;">
+    <div class="kicker">For the judges</div>
+    <h2>See it run.</h2>
+    <div style="display: flex; gap: 56px; margin-top: 40px;">
+      <div style="flex: 1;">
+        <div style="font-size: 21px; font-weight: 800; margin-bottom: 16px;">The films (links in submission)</div>
+        <div class="sub" style="font-size: 18px; line-height: 1.9;">
+          · Moongate launch film — 33s, from 10 screenshots<br/>
+          · World Cup mascots — 30s, zero assets, all code-drawn<br/>
+          · “Day in the life” — 30s narrative, zero assets<br/>
+          · MoonAgents World Cup tracker + Poker trainer product ads
+        </div>
+      </div>
+      <div style="flex: 1;">
+        <div style="font-size: 21px; font-weight: 800; margin-bottom: 16px;">The pipeline</div>
+        <div class="sub" style="font-size: 18px; line-height: 1.9;">
+          <span class="mono">~/moonagents-ads</span> — Remotion engine, music generator, playbook<br/>
+          Live demo: drop screenshots, watch a film come out — 10 minutes, any product.
+        </div>
+      </div>
+    </div>
+    <div class="sub" style="margin-top: 44px; font-size: 14px; color: #55525e;">
+      Built with Claude Code · Remotion (React) · numpy-synthesized score · ffmpeg verification loop
+    </div>
+  </div>
+  <div class="foot"><span>AI ADS PIPELINE</span><span>08</span></div>
+</section>
+
+<script>
+  // headless verification helper: deck.html#3 shows slide 3
+  const n = parseInt(location.hash.slice(1), 10);
+  if (!isNaN(n)) document.body.style.transform = `translateY(-${(n - 1) * 720}px)`;
+</script>
+</body>
+</html>

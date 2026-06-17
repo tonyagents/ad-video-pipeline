@@ -1,0 +1,78 @@
+{
+  "hook": {
+    "image": "01-prompt.png",
+    "title": "It starts with one prompt.",
+    "sub": "“build a poker trainer that uses USDC as the bankroll”",
+    "duration": 140
+  },
+  "scenes": [
+    {
+      "img": "02-response.jpg",
+      "kicker": "No code. No app store.",
+      "caption": "MoonAgents builds it — live.",
+      "sub": "Thought for 10 seconds. Shipped a working app.",
+      "focusY": "0%",
+      "duration": 110
+    },
+    {
+      "img": "03-table.jpg",
+      "kicker": "Poker Pro Trainer",
+      "caption": "A playable trainer.\nIn seconds.",
+      "focusY": "12%",
+      "duration": 115
+    },
+    {
+      "img": "04-verdict-fold.jpg",
+      "kicker": "Range trainer",
+      "caption": "Every decision graded…",
+      "sub": "Fold, call or raise — it tells you what the math says.",
+      "focusY": "78%",
+      "duration": 110
+    },
+    {
+      "img": "05-verdict-raise.jpg",
+      "kicker": "Range trainer",
+      "caption": "…with the numbers\nto back it up.",
+      "focusY": "72%",
+      "duration": 110
+    },
+    {
+      "img": "06-potodds-q.jpg",
+      "kicker": "Pot odds drill",
+      "caption": "Train the math.",
+      "focusY": "0%",
+      "duration": 80
+    },
+    {
+      "img": "07-potodds-a.jpg",
+      "kicker": "Pot odds drill",
+      "caption": "Equity vs. price —\ninstant feedback.",
+      "focusY": "30%",
+      "duration": 110
+    },
+    {
+      "img": "08-cheatsheet.jpg",
+      "kicker": "Cheat sheet",
+      "caption": "The theory,\nbuilt in.",
+      "focusY": "25%",
+      "duration": 85
+    },
+    {
+      "img": "09-bankroll.jpg",
+      "kicker": "USDC bankroll",
+      "caption": "Tracked against\nyour real USDC.",
+      "sub": "Practice-only — funds never move.",
+      "focusY": "10%",
+      "duration": 120
+    }
+  ],
+  "endCard": {
+    "title": "Build anything.",
+    "brand": "MoonAgents",
+    "tagline": "The AI agent in your MoonPay wallet",
+    "url": "moonpay.com/agents",
+    "disclaimer": "Practice trainer for learning. Educational, not gambling advice.",
+    "duration": 110
+  },
+  "music": "music.wav"
+}

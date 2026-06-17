@@ -1,0 +1,9 @@
+https://cdn.mercury.com/fem/_next/static/media/1bf268c77b3001c9-s.p.woff2
+https://cdn.mercury.com/fem/_next/static/media/66786c931e084141-s.p.woff2
+https://cdn.mercury.com/fem/_next/static/media/92d547acff458051-s.p.woff2
+https://cdn.mercury.com/fem/_next/static/media/api.15a5621e.png
+https://cdn.mercury.com/fem/_next/static/media/b8e7c140d2eeafb4-s.p.woff2
+https://cdn.mercury.com/fem/_next/static/media/cac75d8208a23b56-s.p.woff2
+https://cdn.mercury.com/fem/_next/static/media/e23f2cfd0cb342af-s.p.woff2
+https://cdn.mercury.com/fem/_next/static/media/insights.2af46930.png
+https://cdn.mercury.com/fem/_next/static/media/personal-banking.99aade42.png

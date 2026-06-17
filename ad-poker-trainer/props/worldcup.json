@@ -1,0 +1,51 @@
+{
+  "hook": {
+    "image": "wc-01-prompt.png",
+    "title": "World Cup szn. One prompt.",
+    "sub": "“track every World Cup game along with the prediction markets”",
+    "duration": 140
+  },
+  "scenes": [
+    {
+      "img": "wc-02-agent.png",
+      "kicker": "MoonAgents",
+      "caption": "It does the\nresearch — live.",
+      "sub": "Reads the markets. Checks the data. Ships the app.",
+      "focusY": "0%",
+      "duration": 100
+    },
+    {
+      "img": "wc-03-tracker.png",
+      "kicker": "FIFA World Cup 2026",
+      "caption": "Every match.\nLive Polymarket odds.",
+      "focusY": "0%",
+      "duration": 115
+    },
+    {
+      "img": "wc-04-contenders.png",
+      "kicker": "Who lifts it?",
+      "caption": "Title odds,\nalways current.",
+      "sub": "Spain 17% · France 16% · Portugal 11%",
+      "focusY": "50%",
+      "duration": 100
+    },
+    {
+      "img": "wc-05-live.png",
+      "kicker": "Live now",
+      "caption": "Mexico 87% —\nticking in real time.",
+      "sub": "$9.2M traded on one match today. Tap to trade.",
+      "focusY": "50%",
+      "duration": 110
+    }
+  ],
+  "endCard": {
+    "logo": "moonpay-logo-white-on-purple.png",
+    "title": "Trade the World Cup.",
+    "brand": "MoonAgents",
+    "tagline": "The AI agent in your MoonPay wallet",
+    "url": "moonpay.com/agents",
+    "disclaimer": "Prediction markets involve risk. Informational, not financial advice.",
+    "duration": 110
+  },
+  "music": "music-worldcup.wav"
+}

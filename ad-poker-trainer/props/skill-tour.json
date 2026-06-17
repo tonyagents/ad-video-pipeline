@@ -1,0 +1,44 @@
+{
+  "intro": {
+    "line1": "Design your own",
+    "line2": "trading skills.",
+    "duration": 100
+  },
+  "eyebrow": "SKILL CREATION",
+  "scenes": [
+    {
+      "img": "skf-home.jpg",
+      "title": "Just ask.",
+      "sub": "what should I build?",
+      "focusY": "32%",
+      "duration": 120
+    },
+    {
+      "img": "skf-skills1.jpg",
+      "title": "It designs the set.",
+      "sub": "tailored to how you trade",
+      "focusY": "0%",
+      "duration": 125
+    },
+    {
+      "img": "skf-skills2.jpg",
+      "title": "Pick one. Build it.",
+      "sub": "in plain English",
+      "focusY": "0%",
+      "duration": 120
+    },
+    {
+      "img": "skf-arb.jpg",
+      "title": "Then it runs.",
+      "sub": "real output, on a schedule",
+      "focusY": "0%",
+      "duration": 125
+    }
+  ],
+  "endCard": {
+    "brand": "MoonAgents",
+    "url": "moonpay.com/agents",
+    "duration": 100
+  },
+  "music": "music-skilltour.wav"
+}

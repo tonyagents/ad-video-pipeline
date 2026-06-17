@@ -1,0 +1,62 @@
+Hey everyone, it's start from called code here. I heard a lot of questions about how how
+did fable edits on launch videos. I want to go over that. You know, it also made this
+deck. So it's a little bit meta. It's also editing this video. No, no, it's not, it's
+not. But yeah, it, but it did edit this launch video. And so how did it work? So where
+to the video production crew? And we did 17 takes. So there were four scenes in it and
+across that we did a bunch of different takes. And this is what I got, right? Like not
+color graded 25 gigabytes worth of files and ended up with this. So color graded, we
+added some UI, we stitched it all together. And cloud code did everything. I didn't touch
+like a didn't touch it terminal or sorry, didn't touch a video either. So yeah, what does
+it look like? The starting prompt is this. I'm processing a bunch of recordings of videos,
+I want you to run a transcription service on them and stitch together the best shots
+into one final clip. You know, no, it's their multiple takes per scene. The best takes
+are usually the ones at the end with the fewest arms, but that can change. I can also, I
+reshot the final scene. You know, and I asked it to create a JSON file for the video that
+shows per scene, each clip we're using. And so this is all, like all I gave it with
+folder of videos. I didn't tell it, for example, which videos are in which scenes, right?
+And what it did is it transcribed every one of them. So it used whisper and it created this
+array of words per video. And it, you know, de-duped them and chose the best one. So I'll
+leave 17 takes. I figured out which ones are in which scenes. And then it, you know, like
+finds the best one for it, right? And it compiles all of this into an edited JSON file of,
+and it compiles all of this into an edited JSON file. Basically, it has every scene,
+the candidate takes, the reasons it chose the scenes it did, and the start and end times
+per scene. It just doesn't do any clipping in the middle of the video, but it totally could have,
+you know, like this was not something that I, I tried to make each cut fairly clean. So,
+and then you get F of MPag to like stitch together the first cut. So this is what it looked like.
+This is actually a little bit postgrading. So, but yeah, yeah, the F of MPag does this.
+Now then we can do the color grader. So the color grader looks muted. Like this is actually what
+it looked like here in neutrals 709. What do we want to end up with? And yeah, how can we regrade it?
+So it writes, you know, I know nothing about color grading, right? I just know that like it's a thing.
+So I just asked it to write a bunch of color gradings. And this is the final, you know, off the
+camera to like to a neutral color grade. So, so did that. The next point is I want to create
+like design assets. So I gave it previously the script and I had to make a bunch of like design
+assets. And then I said, okay, like I want to turn use remotion, remotion is a library that like
+takes video and react components and allows you to like kind of export them all together into
+an end video. And so I said, okay, let's make a bunch of components for remotion that show that
+implements design. So this is what it looks like. It's all react it like chooses the beats and
+timings using the transcription JSON that we have before, right? So it has all the state inside
+of itself, you know, fades things in and out. It has a bunch of like, you know, knobs I can adjust.
+And the final edit is this sort of like, you know, when to show which UI component, right? And so
+here's an example of, you know, it switching like a UI component on the right beat. So as soon as I
+say, is cloud doing the right work, it switches the two components. And again, students all by itself,
+based on the transcription and the and the remotion component. So then I say, like, okay, let's
+export the designs to Figma. And yeah, I want to let the design team be able to edit it, right? And so
+I start with this. This was like a first pass, essentially like a cloud design like way, but I know
+the design team has much better taste than me. And I also give them like the ability to edit the
+color reader. They end up doing this. But like, you know, like I sent them an HTML file that like,
+let's them play with some of the, like the settings. And then so they go edit the Figma and they
+give it back to me. And I just say it's all using the Figma FCP. I just say the design has been
+updated in the Figma. Can you update the video to match? And it does this, right? So it like turns
+it into this like clean, like, you know, transparent look that the design team put together. And this
+is what it looks in the end. So it's a before and after. Or like it's got this like, you know, before
+and after you either sample clip. I do watchers might realize that this is not the video we uploaded
+to cloud devs. I was not able to turn around the design in time because I mean, Tokyo, but, you know,
+I ended up doing it. So, you know, the important thing here is like, this is all just code, right?
+There's all cloud code. The cloud code is writing. So every there's a transcript for every JSON.
+Then there's that final edit JSON file that I mentioned, right? Then there's this,
+this grading, these grading files. Then there are a bunch of React components for emotion. There's
+this final edit that stitches all together. And then it uses npx remotion render to render the
+video, apply the color grading, do the remotion UI and put it all together in the end. So yeah, you
+know, it's and it did it. So yeah, that's that's how it happened. Yeah, Fable is incredible.
+Hoping to, you know, make more video knowledge. It's easier to edit. Let me know if you have any
+questions. Thanks for that.

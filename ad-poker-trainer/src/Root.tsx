@@ -3,6 +3,7 @@ import {Ad, AdProps, DEFAULT_PROPS, adSchema, totalDuration} from './Ad';
 import {MascotAd, MASCOT_TOTAL} from './MascotAd';
 import {DayAd, DAY_TOTAL} from './DayAd';
 import {MoongateAd, MOONGATE_TOTAL} from './MoongateAd';
+import {ClankerAd, CLANKER_TOTAL} from './ClankerAd';
 import worldcupProps from '../props/worldcup.json';
 import skillProps from '../props/skill-creation.json';
 import {FeatureTour, TOUR_DEFAULT, tourSchema, tourDuration, TourProps} from './FeatureTour';
@@ -104,6 +105,14 @@ export const RemotionRoot: React.FC = () => {
         id="MoongateAd"
         component={MoongateAd}
         durationInFrames={MOONGATE_TOTAL}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="ClankerAd"
+        component={ClankerAd}
+        durationInFrames={CLANKER_TOTAL}
         fps={30}
         width={1920}
         height={1080}

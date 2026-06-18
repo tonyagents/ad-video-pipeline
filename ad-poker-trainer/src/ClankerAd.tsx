@@ -154,38 +154,56 @@ const Hook: React.FC<{duration: number}> = ({duration}) => {
 
 // ----------------------------------------------------------- phone call ----
 
-type Turn = {who: 'caller' | 'clanker'; text: string; at: number; kicker?: string; caption?: string};
+type Turn = {
+  who: 'caller' | 'clanker';
+  text: string;
+  at: number; // frame (relative to CALL start) the bubble appears AND the VO begins
+  dur: number; // VO length in frames — also the clanker "speaking" window
+  vo: string; // voiceover clip in public/clanker-vo/
+  kicker?: string;
+  caption?: string;
+};
 
+// Timings are fitted to the measured ElevenLabs clip durations so the bubbles
+// land in lock-step with the spoken audio (caller asks → Clanker answers).
 const SCRIPT: Turn[] = [
-  {who: 'caller', text: 'Hey Clanker — what’s bitcoin at?', at: 14},
+  {who: 'caller', text: 'Hey Clanker — what’s bitcoin at?', at: 16, dur: 62, vo: 'c1-caller'},
   {
     who: 'clanker',
     text: 'Bitcoin’s around sixty-four three seventy, down about two percent today.',
-    at: 64,
+    at: 86,
+    dur: 147,
+    vo: 'c1-clanker',
     kicker: 'Live prices',
     caption: 'Ask it anything\nabout the markets.',
   },
-  {who: 'caller', text: 'What’s hot right now?', at: 165},
+  {who: 'caller', text: 'What’s hot right now?', at: 247, dur: 33, vo: 'c2-caller'},
   {
     who: 'clanker',
     text: 'Solana and a couple of AI tokens are running. Prediction markets like the Fed cut too.',
-    at: 212,
+    at: 288,
+    dur: 160,
+    vo: 'c2-clanker',
     kicker: 'Trending + markets',
     caption: 'What’s moving —\ntokens, stocks, odds.',
   },
-  {who: 'caller', text: 'If you were me, would you buy Tesla here?', at: 330},
+  {who: 'caller', text: 'If you were me, would you buy Tesla here?', at: 462, dur: 69, vo: 'c3-caller'},
   {
     who: 'clanker',
     text: 'It’s near the top of its range. I’d wait for a dip — but that’s your call, not mine.',
-    at: 380,
+    at: 539,
+    dur: 146,
+    vo: 'c3-clanker',
     kicker: 'Banker-style advice',
     caption: 'Recommendations,\nlike a real banker.',
   },
-  {who: 'caller', text: 'Fine — just buy me twenty bucks of it.', at: 500},
+  {who: 'caller', text: 'Fine — just buy me twenty bucks of it.', at: 699, dur: 72, vo: 'c4-caller'},
   {
     who: 'clanker',
     text: 'Can’t. I’m read-only. I’ll advise all day, but I never touch your wallet.',
-    at: 552,
+    at: 779,
+    dur: 133,
+    vo: 'c4-clanker',
     kicker: 'Read-only',
     caption: 'It advises.\nIt never moves your money.',
   },
@@ -231,8 +249,8 @@ const PhoneCall: React.FC<{duration: number}> = ({duration}) => {
   const p = interpolate(frame, [ai, ai + 22], [0, 1], {...clamp, easing: Easing.inOut(Easing.cubic)});
   const scroll = prev + (cur - prev) * p;
 
-  // active clanker turn → robot "speaking" for ~70 frames after it lands
-  const active = SCRIPT.find((t) => t.who === 'clanker' && frame >= t.at && frame < t.at + 78);
+  // active clanker turn → robot "speaking" for the length of its voiceover
+  const active = SCRIPT.find((t) => t.who === 'clanker' && frame >= t.at && frame < t.at + t.dur);
   const speaking = Boolean(active);
 
   // current caption (from latest clanker turn that has one)
@@ -407,14 +425,31 @@ const EndCard: React.FC<{duration: number}> = ({duration}) => {
 // ----------------------------------------------------------------- root ----
 
 const HOOK_D = 150;
-const CALL_D = 660;
+const CALL_D = 940;
 const END_D = 120;
 export const CLANKER_TOTAL = HOOK_D + CALL_D + END_D;
 
 export const ClankerAd: React.FC = () => {
+  // Music plays under everything but ducks low during the call so the spoken
+  // dialogue is the focus; it lifts back up for the end card.
+  const musicVolume = (f: number) => {
+    const callStart = HOOK_D;
+    const callEnd = HOOK_D + CALL_D;
+    if (f < callStart - 12) return 0.85;
+    if (f < callStart) return interpolate(f, [callStart - 12, callStart], [0.85, 0.14], clamp);
+    if (f < callEnd) return 0.14;
+    return interpolate(f, [callEnd, callEnd + 16], [0.14, 0.85], clamp);
+  };
+
   return (
     <AbsoluteFill style={{backgroundColor: BG}}>
-      <Audio src={staticFile('music-clanker.wav')} />
+      <Audio src={staticFile('music-clanker.wav')} volume={musicVolume} />
+      {/* spoken dialogue, locked to each bubble's appearance */}
+      {SCRIPT.map((t, i) => (
+        <Sequence key={`vo-${i}`} from={HOOK_D + t.at} durationInFrames={t.dur + 4}>
+          <Audio src={staticFile(`clanker-vo/${t.vo}.mp3`)} volume={t.who === 'caller' ? 1 : 0.95} />
+        </Sequence>
+      ))}
       <Sequence durationInFrames={HOOK_D}>
         <Hook duration={HOOK_D} />
       </Sequence>

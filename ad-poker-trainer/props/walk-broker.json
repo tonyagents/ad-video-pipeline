@@ -1,0 +1,48 @@
+{
+  "video": "th-broker.mp4",
+  "durationInFrames": 1980,
+  "kicker": "YOUR AI BROKER",
+  "scrim": "left",
+  "cards": [
+    {
+      "id": "agents",
+      "kind": "note",
+      "anchor": "topRight",
+      "at": 26.45,
+      "until": 34.75,
+      "width": 360,
+      "title": "Your agents",
+      "subtitle": "the ones that power MoonPay",
+      "body": "Claude · Codex walk you through your very first buy."
+    },
+    {
+      "id": "wallet",
+      "kind": "wallet",
+      "anchor": "left",
+      "at": 35.55,
+      "until": 50.75,
+      "width": 392,
+      "title": "Wallet created",
+      "subtitle": "stored on your computer"
+    },
+    {
+      "id": "buy",
+      "kind": "buy",
+      "anchor": "left",
+      "at": 51.55,
+      "width": 392,
+      "title": "Buy any crypto",
+      "subtitle": "funded with MoonPay"
+    }
+  ],
+  "lowerThirds": [
+    {"at": 0.25, "until": 5.65, "text": "Remember calling\nyour broker?"},
+    {"at": 22.65, "until": 26.25, "text": "Now it lives", "sub": "on your computer"},
+    {"at": 38.85, "until": 42.85, "text": "Your keys.", "sub": "Your computer."}
+  ],
+  "endCard": {
+    "at": 62.8,
+    "headline": "A broker on your computer.",
+    "url": "moonpay.com/agents"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "video": "th-auto.mp4",
+  "durationInFrames": 750,
+  "kicker": "AUTOMATIONS",
+  "scrim": "left",
+  "cards": [
+    {
+      "id": "auto",
+      "kind": "automations",
+      "anchor": "left",
+      "at": 7.9,
+      "width": 392,
+      "title": "Automations",
+      "subtitle": "Your strategy, always on",
+      "rows": [
+        {"label": "Stop loss", "detail": "Auto-sell if it drops", "icon": "🛑", "at": 8.9},
+        {"label": "Take profit", "detail": "Lock in the 10×", "icon": "🎯", "at": 11.5},
+        {"label": "DCA", "detail": "Buy the dips on schedule", "icon": "📈", "at": 12.5},
+        {"label": "Recurring buys", "detail": "Set it and forget it", "icon": "🔁", "at": 13.4}
+      ]
+    }
+  ],
+  "lowerThirds": [
+    {"at": 0.4, "until": 4.3, "text": "Stressed waiting\nfor the 10×?"},
+    {"at": 16.9, "until": 21.1, "text": "A personal trader", "sub": "in your pocket"}
+  ],
+  "endCard": {
+    "at": 21.9,
+    "headline": "Trade on autopilot.",
+    "url": "moonpay.com/agents"
+  }
+}

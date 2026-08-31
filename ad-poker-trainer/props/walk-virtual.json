@@ -1,0 +1,51 @@
+{
+  "video": "th-virtual.mp4",
+  "durationInFrames": 2085,
+  "kicker": "VIRTUAL ACCOUNTS",
+  "scrim": "left",
+  "cards": [
+    {
+      "id": "va",
+      "kind": "virtualAccount",
+      "anchor": "left",
+      "at": 9.7,
+      "until": 24.3,
+      "width": 392,
+      "title": "Virtual account",
+      "subtitle": "USD / EUR → stablecoins"
+    },
+    {
+      "id": "kyc",
+      "kind": "kyc",
+      "anchor": "left",
+      "at": 25.3,
+      "until": 35.8,
+      "width": 380,
+      "title": "Verify identity",
+      "subtitle": "one link, one time"
+    },
+    {
+      "id": "auto",
+      "kind": "automations",
+      "anchor": "left",
+      "at": 50.3,
+      "width": 396,
+      "title": "On autopilot",
+      "subtitle": "once the stablecoins land",
+      "rows": [
+        {"label": "Deposit to lending", "detail": "Earn yield automatically", "icon": "🏛️", "at": 52.5},
+        {"label": "Swap any token, any chain", "detail": "Best route, every time", "icon": "🔀", "at": 54.9},
+        {"label": "Optimize a portfolio", "detail": "Rebalanced for you", "icon": "📊", "at": 57.2}
+      ]
+    }
+  ],
+  "lowerThirds": [
+    {"at": 0.2, "until": 5.7, "text": "A bank account", "sub": "built for your agent"},
+    {"at": 40.3, "until": 45.3, "text": "Direct-deposit", "sub": "your paycheck → your wallet"}
+  ],
+  "endCard": {
+    "at": 66.2,
+    "headline": "Run your money on autopilot.",
+    "url": "moonpay.com/agents"
+  }
+}

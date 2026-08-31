@@ -1,0 +1,9 @@
+<svg viewBox="0 0 80 80" width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gate mark centered in 80x80 canvas -->
+  <!-- Left pillar -->
+  <line x1="15" y1="65" x2="15" y2="36" stroke="#9333ea" stroke-width="6.5" stroke-linecap="round"/>
+  <!-- Semicircular arch -->
+  <path d="M 15 36 A 22.5 22.5 0 0 0 60 36" stroke="#9333ea" stroke-width="6.5" stroke-linecap="round" fill="none"/>
+  <!-- Right pillar -->
+  <line x1="60" y1="36" x2="60" y2="65" stroke="#9333ea" stroke-width="6.5" stroke-linecap="round"/>
+</svg>

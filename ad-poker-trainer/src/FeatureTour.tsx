@@ -45,6 +45,7 @@ export const tourSchema = z.object({
   endCard: z.object({
     brand: z.string(),
     url: z.string(),
+    mark: z.enum(['moonpay', 'moongate']).optional(),
     duration: z.number().int().min(30),
   }),
   music: z.string(),
@@ -303,11 +304,22 @@ const LogoLockup: React.FC<{endCard: TourProps['endCard']}> = ({endCard}) => {
           transform: `scale(${0.92 + p * 0.08})`,
         }}
       >
-        {/* MoonPay glyph: big circle + small circle */}
-        <div style={{position: 'relative', width: 66, height: 66}}>
-          <div style={{position: 'absolute', left: 0, bottom: 0, width: 52, height: 52, borderRadius: '50%', backgroundColor: '#fff'}} />
-          <div style={{position: 'absolute', right: 0, top: 0, width: 24, height: 24, borderRadius: '50%', backgroundColor: '#fff'}} />
-        </div>
+        {endCard.mark === 'moongate' ? (
+          /* official moongate gate mark: two pillars + downward moon-sag */
+          <svg width={84} height={58} viewBox="11.5 32.5 52 36" fill="none">
+            <g stroke={PURPLE} strokeWidth={6.5} strokeLinecap="round" fill="none">
+              <line x1="15" y1="65" x2="15" y2="36" />
+              <path d="M 15 36 A 22.5 22.5 0 0 0 60 36" />
+              <line x1="60" y1="36" x2="60" y2="65" />
+            </g>
+          </svg>
+        ) : (
+          /* MoonPay glyph: big circle + small circle */
+          <div style={{position: 'relative', width: 66, height: 66}}>
+            <div style={{position: 'absolute', left: 0, bottom: 0, width: 52, height: 52, borderRadius: '50%', backgroundColor: '#fff'}} />
+            <div style={{position: 'absolute', right: 0, top: 0, width: 24, height: 24, borderRadius: '50%', backgroundColor: '#fff'}} />
+          </div>
+        )}
         <div style={{fontSize: 72, fontWeight: 700, color: TEXT, letterSpacing: -1}}>{endCard.brand}</div>
       </div>
       <div

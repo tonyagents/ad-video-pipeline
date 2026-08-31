@@ -1,0 +1,38 @@
+{
+  "intro": {
+    "line1": "Any chain.",
+    "line2": "No problem.",
+    "duration": 100
+  },
+  "eyebrow": "ANY CHAIN, ONE GATE",
+  "scenes": [
+    {
+      "img": "ch-all.png",
+      "title": "Every chain, one list.",
+      "sub": "Solana · Base · Polygon · Arbitrum · BNB",
+      "focusY": "0%",
+      "duration": 120
+    },
+    {
+      "img": "ch-filter.png",
+      "title": "Pick any chain.",
+      "sub": "no new wallets, no new networks",
+      "focusY": "0%",
+      "duration": 115
+    },
+    {
+      "img": "ch-convert.jpg",
+      "title": "Pay in one, get another.",
+      "sub": "0.1 SOL → a Base token in ~3s — no bridge",
+      "focusY": "0%",
+      "duration": 135
+    }
+  ],
+  "endCard": {
+    "brand": "moongate",
+    "url": "moongate.one",
+    "mark": "moongate",
+    "duration": 100
+  },
+  "music": "music-chain-tour.wav"
+}

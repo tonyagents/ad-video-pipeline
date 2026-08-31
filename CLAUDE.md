@@ -46,6 +46,29 @@ Full background: `PLAYBOOK.md`.
    (add `--concurrency=4` if Chrome flakes with "got no response"; needs non-sandboxed shell).
 7. **Verify**: extract 3–4 frames with ffmpeg, Read them, check captions/crops/PII. Then `open` the MP4.
 
+## Moongate brand
+- moongate is a separate MoonPay product (moongate.one): "Every market. One gate." —
+  xStocks (tokenized equities, Apple Pay, on-chain settle) · Tokens · Predictions · Baskets.
+- **Logo mark = two pillars + a downward "moon" sag between the tops** (moon + gate). NOT an
+  "M". Official geometry (assets/brand/moongate-icon.svg): viewBox 0 0 80 80, pillars at
+  x15 & x60 (y36→65), arch `M 15 36 A 22.5 22.5 0 0 0 60 36`, stroke 6.5 round. Accent purple
+  `#8B5CF6` (brand SVG uses `#9333ea`). The MoongateAd Wordmark uses this exact geometry —
+  don't revert to the hand-drawn "M" (it rendered squeezed). Brand assets: assets/brand/
+  moongate-{icon,white,gradient}.svg + moongate-mark-{purple,white-on-black}.png.
+
+## Talking-head walkthroughs (`WalkthroughSpot`)
+- `src/WalkthroughSpot.tsx` — cinematic product-walkthrough engine: full-frame graded
+  talking-head footage as the scene + liquid-glass MoonAgents UI cards that float into the
+  negative space, timed to the spoken word (visionOS/Anthropic-keynote AR look). One
+  `props/walk-<feature>.json` per spot (video/kicker/scrim/cards/lowerThirds/endCard). Card
+  `kind`s: automations, wallet, buy, virtualAccount, kyc, watchlist, screenshot, note. Cards
+  use `at`/`until` in **seconds**; `CheckRow` rows fire on their own `at`.
+- **AUDIO: grade WITHOUT `-an`** — the talking-head VO is the whole point. ffmpeg grade must
+  `-c:a aac -b:a 192k` to keep the original voice; `OffthreadVideo volume={1}` carries it,
+  music bed sits at `volume={0.1}`. (Stripping audio = only-music bug.)
+- Time cards from Whisper word stamps: `uvx --system-certs --from openai-whisper whisper
+  <clip> --model base --word_timestamps True --output_format json`.
+
 ## Conventions
 - Brand: bg `#08070c`, accent purples `#a78bfa`/`#7D00FF`. Do NOT use the orange `✺` starburst
   (it's the Claude mark — Efren asked for it to be removed). Use the MoonPay logo instead.

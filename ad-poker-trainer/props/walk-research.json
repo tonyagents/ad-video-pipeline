@@ -1,0 +1,37 @@
+{
+  "video": "th-research.mp4",
+  "durationInFrames": 915,
+  "kicker": "RESEARCH",
+  "scrim": "left",
+  "cards": [
+    {
+      "id": "watch",
+      "kind": "watchlist",
+      "anchor": "left",
+      "at": 7.55,
+      "until": 25.15,
+      "width": 392,
+      "title": "Watchlist",
+      "subtitle": "auto-updating"
+    },
+    {
+      "id": "artifact",
+      "kind": "note",
+      "anchor": "topRight",
+      "at": 18.5,
+      "until": 27.3,
+      "width": 340,
+      "title": "Artifact",
+      "subtitle": "generated for you",
+      "body": "Your watchlist, turned into a visual you can actually read."
+    }
+  ],
+  "lowerThirds": [
+    {"at": 0.25, "until": 4.75, "text": "Research any token,", "sub": "on any chain"}
+  ],
+  "endCard": {
+    "at": 27.5,
+    "headline": "Find your next conviction.",
+    "url": "moonpay.com/agents"
+  }
+}

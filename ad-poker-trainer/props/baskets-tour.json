@@ -1,0 +1,45 @@
+{
+  "intro": {
+    "line1": "Buy the whole",
+    "line2": "narrative.",
+    "duration": 100
+  },
+  "eyebrow": "MOONGATE BASKETS",
+  "scenes": [
+    {
+      "img": "bk-list.jpg",
+      "title": "Curated narratives.",
+      "sub": "AI, frontier tech, sovereign crypto — ready to buy",
+      "focusY": "50%",
+      "duration": 120
+    },
+    {
+      "img": "bk-detail.png",
+      "title": "See what's inside.",
+      "sub": "NVIDIA · OpenAI · Anthropic · xAI · Render",
+      "focusY": "8%",
+      "duration": 125
+    },
+    {
+      "img": "bk-invest.png",
+      "title": "Buy the mix in one tap.",
+      "sub": "a ready-made portfolio, fees covered from your SOL",
+      "focusY": "6%",
+      "duration": 120
+    },
+    {
+      "img": "bk-positions.png",
+      "title": "It rebalances itself.",
+      "sub": "auto-rebalance holds your target mix, every month",
+      "focusY": "4%",
+      "duration": 125
+    }
+  ],
+  "endCard": {
+    "brand": "moongate",
+    "url": "moongate.one",
+    "mark": "moongate",
+    "duration": 100
+  },
+  "music": "music-baskets-tour.wav"
+}

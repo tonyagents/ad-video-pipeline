@@ -26,13 +26,13 @@ const sceneFade = (frame: number, duration: number) =>
   interpolate(frame, [0, 10, duration - 10, duration], [0, 1, 1, 0], clamp);
 
 const Wordmark: React.FC<{size?: number}> = ({size = 54}) => (
-  <div style={{display: 'flex', alignItems: 'center', gap: size * 0.28, fontFamily: FONT}}>
-    {/* official moongate M: two pillars with a sagging moon-arc between them */}
-    <svg width={size * 1.1} height={size * 1.1} viewBox="0 0 100 100">
-      <g stroke={PURPLE_DEEP} strokeWidth={13.5} strokeLinecap="round" fill="none">
-        <path d="M 27 27 L 27 79" />
-        <path d="M 73 27 L 73 79" />
-        <path d="M 27 27 C 29 58, 71 58, 73 27" />
+  <div style={{display: 'flex', alignItems: 'center', gap: size * 0.26, fontFamily: FONT}}>
+    {/* official moongate mark: two pillars + a downward moon-sag (from brand SVG) */}
+    <svg width={size * 1.18} height={size * 0.82} viewBox="11.5 32.5 52 36" fill="none">
+      <g stroke={PURPLE_DEEP} strokeWidth={6.5} strokeLinecap="round" fill="none">
+        <line x1="15" y1="65" x2="15" y2="36" />
+        <path d="M 15 36 A 22.5 22.5 0 0 0 60 36" />
+        <line x1="60" y1="36" x2="60" y2="65" />
       </g>
     </svg>
     <div style={{fontSize: size, fontWeight: 800, color: TEXT, letterSpacing: -size * 0.02}}>

@@ -13,7 +13,7 @@ import {
 } from 'remotion';
 import {EndCard} from './Ad';
 
-// "You shouldn't have to ask twice" — MoonAgents Automations hero launch film.
+// "You shouldn't have to ask twice" — NovaAgents Automations hero launch film.
 // Re-timed to let the voiceover finish every line naturally (voice pacing
 // drives section length, not a fixed fast-cut runtime):
 // 0-3s hook -> 3-13.3s transformation -> 13.3-31.3s lifestyle + product cards
@@ -91,7 +91,7 @@ const CardHeader: React.FC<{title: string; badge?: string}> = ({title, badge}) =
       }}
     >
       <Img
-        src={staticFile('moonagents-helmet-icon.png')}
+        src={staticFile('novaagents-helmet-icon.png')}
         style={{width: '100%', height: '100%', objectFit: 'cover'}}
       />
     </div>
@@ -355,7 +355,7 @@ const NotificationPop: React.FC<{from: number; to: number; voice: string}> = ({
           <div style={{display: 'flex', alignItems: 'center', gap: 16}}>
             <div style={{width: 40, height: 40, borderRadius: 12, overflow: 'hidden', flexShrink: 0}}>
               <Img
-                src={staticFile('moonagents-helmet-icon.png')}
+                src={staticFile('novaagents-helmet-icon.png')}
                 style={{width: '100%', height: '100%', objectFit: 'cover'}}
               />
             </div>
@@ -593,11 +593,11 @@ export const AutomationsHeroFilm: React.FC = () => {
         </Sequence>
         <EndCard
           endCard={{
-            logo: 'moonpay-logo-white-on-purple.png',
+            logo: 'nova-logo-white-on-purple.png',
             title: "You shouldn't have to ask twice.",
-            brand: 'MoonAgents',
+            brand: 'NovaAgents',
             tagline: 'Open Automations',
-            url: 'moonpay.com/agents',
+            url: 'example.com/agents',
             disclaimer: 'Cannot move funds · Not investment advice.',
             duration: 140,
           }}

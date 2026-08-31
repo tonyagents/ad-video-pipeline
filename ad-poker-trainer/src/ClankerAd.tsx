@@ -416,7 +416,7 @@ const EndCard: React.FC<{duration: number}> = ({duration}) => {
         scan · dial · ask
       </div>
       <div style={{position: 'absolute', bottom: 44, fontSize: 18, color: '#55525e', opacity: subIn}}>
-        Powered by MoonPay agent tools, Claude, Twilio &amp; ElevenLabs. Read-only — informational, not financial advice.
+        Powered by Nova agent tools, Claude, Twilio &amp; ElevenLabs. Read-only — informational, not financial advice.
       </div>
     </AbsoluteFill>
   );

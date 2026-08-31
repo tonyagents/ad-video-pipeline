@@ -63,7 +63,7 @@ const Glass: React.FC<{children: React.ReactNode; width?: number; style?: React.
 
 const HelmetBadge: React.FC<{size?: number}> = ({size = 32}) => (
   <div style={{width: size, height: size, borderRadius: size * 0.3, overflow: 'hidden', flexShrink: 0}}>
-    <Img src={staticFile('moonagents-helmet-icon.png')} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+    <Img src={staticFile('novaagents-helmet-icon.png')} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
   </div>
 );
 
@@ -552,11 +552,11 @@ export const SignalNotNoiseFilm: React.FC = () => {
         </Sequence>
         <EndCard
           endCard={{
-            logo: 'moonpay-logo-white-on-purple.png',
+            logo: 'nova-logo-white-on-purple.png',
             title: 'Signal, not noise.',
-            brand: 'MoonAgents',
+            brand: 'NovaAgents',
             tagline: 'Open Automations',
-            url: 'moonpay.com/agents',
+            url: 'example.com/agents',
             disclaimer: '',
             duration: 105,
           }}

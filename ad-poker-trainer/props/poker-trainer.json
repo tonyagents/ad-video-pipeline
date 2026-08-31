@@ -9,7 +9,7 @@
     {
       "img": "02-response.jpg",
       "kicker": "No code. No app store.",
-      "caption": "MoonAgents builds it — live.",
+      "caption": "NovaAgents builds it — live.",
       "sub": "Thought for 10 seconds. Shipped a working app.",
       "focusY": "0%",
       "duration": 110
@@ -68,9 +68,9 @@
   ],
   "endCard": {
     "title": "Build anything.",
-    "brand": "MoonAgents",
-    "tagline": "The AI agent in your MoonPay wallet",
-    "url": "moonpay.com/agents",
+    "brand": "NovaAgents",
+    "tagline": "The AI agent in your Nova wallet",
+    "url": "example.com/agents",
     "disclaimer": "Practice trainer for learning. Educational, not gambling advice.",
     "duration": 110
   },

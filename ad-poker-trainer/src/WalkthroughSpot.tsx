@@ -14,7 +14,7 @@ import {
 } from 'remotion';
 
 // ── "Cinematic product walkthrough" engine ──────────────────────────────────
-// Full-frame graded talking-head footage as the scene; liquid-glass MoonAgents
+// Full-frame graded talking-head footage as the scene; liquid-glass NovaAgents
 // UI cards float into the negative space, timed to the exact word spoken. Apple
 // / visionOS / Anthropic-keynote feel. One props file (a "spot") per feature.
 
@@ -89,7 +89,7 @@ export const spotSchema = z.object({
   endCard: z.object({
     at: z.number(),
     headline: z.string(),
-    url: z.string().default('moonpay.com/agents'),
+    url: z.string().default('example.com/agents'),
   }),
 });
 
@@ -307,7 +307,7 @@ const Chip: React.FC<{children: React.ReactNode; tone?: 'purple' | 'green' | 'gr
   );
 };
 
-// ── Mocked MoonAgents UI per card kind ────────────────────────────────────────
+// ── Mocked NovaAgents UI per card kind ────────────────────────────────────────
 const CardBody: React.FC<{card: CardProps}> = ({card}) => {
   const {fps} = useVideoConfig();
   const frame = useCurrentFrame();
@@ -353,7 +353,7 @@ const CardBody: React.FC<{card: CardProps}> = ({card}) => {
     case 'buy':
       return (
         <>
-          <CardHeader title={card.title ?? 'Buy crypto'} subtitle={card.subtitle ?? 'funded with MoonPay'} glyph="＄" />
+          <CardHeader title={card.title ?? 'Buy crypto'} subtitle={card.subtitle ?? 'funded with Nova'} glyph="＄" />
           {[
             {s: 'USDC', n: 'US Dollar Coin', c: '#2775ca', a: '$250.00'},
             {s: 'BTC', n: 'Bitcoin', c: '#f7931a', a: '0.0021'},
@@ -683,12 +683,18 @@ const EndLockup: React.FC<{endCard: SpotProps['endCard']; startFrame: number}> =
       />
       <AbsoluteFill style={{alignItems: 'center', justifyContent: 'center', opacity: inAll, fontFamily: FONT}}>
         <div style={{display: 'flex', alignItems: 'center', gap: 22, transform: `scale(${0.92 + p * 0.08})`}}>
-          {/* MoonPay glyph */}
-          <div style={{position: 'relative', width: 60, height: 60}}>
-            <div style={{position: 'absolute', left: 0, bottom: 0, width: 48, height: 48, borderRadius: '50%', backgroundColor: '#fff'}} />
-            <div style={{position: 'absolute', right: 0, top: 0, width: 22, height: 22, borderRadius: '50%', backgroundColor: '#fff'}} />
-          </div>
-          <div style={{fontSize: 66, fontWeight: 700, color: TEXT, letterSpacing: -1}}>MoonAgents</div>
+          {/* generic placeholder glyph — swap for your own logo */}
+          <div
+            style={{
+              position: 'relative',
+              width: 54,
+              height: 54,
+              borderRadius: 14,
+              border: '6px solid #fff',
+              boxSizing: 'border-box',
+            }}
+          />
+          <div style={{fontSize: 66, fontWeight: 700, color: TEXT, letterSpacing: -1}}>NovaAgents</div>
         </div>
         <div
           style={{

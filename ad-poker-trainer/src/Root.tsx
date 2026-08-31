@@ -2,9 +2,7 @@ import {Composition} from 'remotion';
 import {Ad, AdProps, DEFAULT_PROPS, adSchema, totalDuration} from './Ad';
 import {MascotAd, MASCOT_TOTAL} from './MascotAd';
 import {DayAd, DAY_TOTAL} from './DayAd';
-import {MoongateAd, MOONGATE_TOTAL} from './MoongateAd';
 import {ClankerAd, CLANKER_TOTAL} from './ClankerAd';
-import {BasketsAd, BASKETS_TOTAL} from './BasketsAd';
 import {McpAd, MCP_TOTAL} from './McpAd';
 import type {McpAdProps} from './McpAd';
 import worldcupProps from '../props/worldcup.json';
@@ -20,8 +18,6 @@ import {SignalNotNoiseFilm, SIGNAL_NOT_NOISE_TOTAL} from './SignalNotNoiseFilm';
 import {SetTheRulesFilm, SET_THE_RULES_TOTAL} from './SetTheRulesFilm';
 import {AutomationsHumanHeroFilm, AUTOMATIONS_HUMAN_HERO_TOTAL} from './AutomationsHumanHeroFilm';
 import {AutomationsTemplatesDemoFilm, AUTOMATIONS_TEMPLATES_DEMO_TOTAL} from './AutomationsTemplatesDemoFilm';
-import {MoongateOneGateFilm, MOONGATE_ONE_GATE_TOTAL} from './MoongateOneGateFilm';
-import {MoongateRealWorldFilm, MOONGATE_REAL_WORLD_TOTAL} from './MoongateRealWorldFilm';
 import walkAutoProps from '../props/walk-auto.json';
 import walkBrokerProps from '../props/walk-broker.json';
 import walkVirtualProps from '../props/walk-virtual.json';
@@ -31,7 +27,7 @@ export const RemotionRoot: React.FC = () => {
   return (
     <>
       <Composition
-        id="MoonAgentsAd"
+        id="NovaAgentsAd"
         component={Ad}
         schema={adSchema}
         defaultProps={DEFAULT_PROPS}
@@ -119,41 +115,9 @@ export const RemotionRoot: React.FC = () => {
         height={1080}
       />
       <Composition
-        id="MoongateAd"
-        component={MoongateAd}
-        durationInFrames={MOONGATE_TOTAL}
-        fps={30}
-        width={1920}
-        height={1080}
-      />
-      <Composition
-        id="MoongateOneGateFilm"
-        component={MoongateOneGateFilm}
-        durationInFrames={MOONGATE_ONE_GATE_TOTAL}
-        fps={30}
-        width={1920}
-        height={1080}
-      />
-      <Composition
-        id="MoongateRealWorldFilm"
-        component={MoongateRealWorldFilm}
-        durationInFrames={MOONGATE_REAL_WORLD_TOTAL}
-        fps={30}
-        width={1920}
-        height={1080}
-      />
-      <Composition
         id="ClankerAd"
         component={ClankerAd}
         durationInFrames={CLANKER_TOTAL}
-        fps={30}
-        width={1920}
-        height={1080}
-      />
-      <Composition
-        id="BasketsAd"
-        component={BasketsAd}
-        durationInFrames={BASKETS_TOTAL}
         fps={30}
         width={1920}
         height={1080}

@@ -1,5 +1,5 @@
 """Synthesize a UKG / deep-house bed (Silva Bumpa / Chris Stussy lane) for the
-MoonAgents poker-trainer ad. 126 BPM, A minor, 36.35s, stereo 44.1k WAV.
+NovaAgents poker-trainer ad. 126 BPM, A minor, 36.35s, stereo 44.1k WAV.
 
 Timeline is locked to the video: 2 intro bars, kick drops exactly at 4.667s
 (first split scene), groove runs through the end card, 1.7s fade at the tail.

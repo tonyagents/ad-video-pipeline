@@ -16,7 +16,7 @@ import {EndCard} from './Ad';
 // AUTOMATIONS — HUMAN HERO (previz) — "Signal, Not Noise" spine, live-action lead.
 //
 // STATUS: INTERNAL PREVIZ. NOT FOR PUBLICATION.
-// Copy is verbatim from company/content/moonagents-automation-video-approval-pack-2026-08-12.md.
+// Copy is verbatim from company/content/novaagents-automation-video-approval-pack-2026-08-12.md.
 // VO is a placeholder TTS read of that exact copy — swap for the real capture once
 // Product + Legal/Compliance sign off (see approval record in that file) and a real
 // presenter + real screen recording exist. The two "REAL CAPTURE NEEDED" cards below
@@ -79,7 +79,7 @@ const Glass: React.FC<{
 
 const HelmetBadge: React.FC<{size?: number}> = ({size = 32}) => (
   <div style={{width: size, height: size, borderRadius: size * 0.3, overflow: 'hidden', flexShrink: 0}}>
-    <Img src={staticFile('moonagents-helmet-icon.png')} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+    <Img src={staticFile('novaagents-helmet-icon.png')} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
   </div>
 );
 
@@ -465,11 +465,11 @@ export const AutomationsHumanHeroFilm: React.FC = () => {
         </Sequence>
         <EndCard
           endCard={{
-            logo: 'moonpay-logo-white-on-purple.png',
+            logo: 'nova-logo-white-on-purple.png',
             title: 'Schedule the work. Keep the judgment.',
-            brand: 'MoonAgents',
+            brand: 'NovaAgents',
             tagline: 'Start with a monitoring task',
-            url: 'moonpay.com/agents',
+            url: 'example.com/agents',
             disclaimer: '',
             duration: 145,
           }}

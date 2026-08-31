@@ -1,10 +1,10 @@
 {
-  "name": "moonagents-poker-ad",
+  "name": "novaagents-poker-ad",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "studio": "remotion studio",
-    "render": "remotion render MoonAgentsAd"
+    "render": "remotion render NovaAgentsAd"
   },
   "dependencies": {
     "@remotion/cli": "^4.0.0",

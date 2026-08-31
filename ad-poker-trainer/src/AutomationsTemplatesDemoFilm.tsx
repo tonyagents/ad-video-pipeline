@@ -49,7 +49,7 @@ export const AUTOMATIONS_TEMPLATES_DEMO_TOTAL = 1040; // ~34.7s @ 30fps, VO-pace
 
 const HelmetBadge: React.FC<{size?: number}> = ({size = 30}) => (
   <div style={{width: size, height: size, borderRadius: size * 0.3, overflow: 'hidden', flexShrink: 0}}>
-    <Img src={staticFile('moonagents-helmet-icon.png')} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+    <Img src={staticFile('novaagents-helmet-icon.png')} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
   </div>
 );
 
@@ -282,11 +282,11 @@ export const AutomationsTemplatesDemoFilm: React.FC = () => {
         </Sequence>
         <EndCard
           endCard={{
-            logo: 'moonpay-logo-white-on-purple.png',
+            logo: 'nova-logo-white-on-purple.png',
             title: 'Schedule the work. Keep the judgment.',
-            brand: 'MoonAgents',
+            brand: 'NovaAgents',
             tagline: 'Start with a monitoring task',
-            url: 'moonpay.com/agents',
+            url: 'example.com/agents',
             disclaimer: '',
             duration: 145,
           }}

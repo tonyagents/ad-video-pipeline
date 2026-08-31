@@ -1,8 +1,10 @@
-# MoonAgents Video/Ad Production Playbook
+# NovaAgents Video/Ad Production Playbook
 
 Based on Thariq's (@trq212) walkthrough of how Claude edited its own launch video
-entirely with code — no video editor touched. Source video + raw transcript in this folder.
+entirely with code — no video editor touched.
 Reference tweet: https://x.com/trq212/status/2064826394589442448
+(the downloaded reference clip + transcript that used to live in this folder were removed
+for the public release — they're a third party's tweet video, not this repo's own work)
 
 ## The workflow (as described in the video)
 
@@ -36,12 +38,12 @@ Reference tweet: https://x.com/trq212/status/2064826394589442448
 files, React components, final-edit composition), so every step is repeatable, diffable,
 and re-promptable.
 
-## Replicating for MoonAgents ads
+## Replicating for NovaAgents ads
 
 Inputs needed:
-- Raw footage: screen recordings of MoonAgents in action (terminal/phone PWA), and/or
+- Raw footage: screen recordings of NovaAgents in action (terminal/phone PWA), and/or
   talking-head takes. Multiple takes are fine — that's the point.
-- Brand assets: MoonPay/MoonAgents colors, logo, fonts (or a Figma file + Figma MCP).
+- Brand assets: Nova/NovaAgents colors, logo, fonts (or a Figma file + Figma MCP).
 - An ad script or just bullet points per scene.
 
 Pipeline (all tools already installed locally):
@@ -56,7 +58,5 @@ Suggested ad formats from one source session:
 - Hook in first 2s, captions burned in (most ads watched muted), end card with CTA
 
 ## Files in this folder
-- `moonagents-source-1080p.mp4` — Thariq's video, 1740×1080, 6:39, AAC stereo (best quality X serves)
-- `moonagents-source-1080p.jpg` — original thumbnail
-- `moonagents-source-1080p.info.json` — tweet metadata
-- `transcript-raw.txt` — Whisper transcript (base model; "F of MPag"=ffmpeg, "FCP"=MCP, "cloud code"=Claude Code)
+(the reference clip, thumbnail, tweet metadata, and Whisper transcript that used to be
+listed here were removed for the public release — see note above)

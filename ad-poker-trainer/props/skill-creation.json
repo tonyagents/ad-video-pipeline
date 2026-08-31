@@ -33,11 +33,11 @@
     }
   ],
   "endCard": {
-    "logo": "moonpay-logo-white-on-purple.png",
+    "logo": "nova-logo-white-on-purple.png",
     "title": "Build your edge.",
-    "brand": "MoonAgents",
-    "tagline": "The AI agent in your MoonPay wallet",
-    "url": "moonpay.com/agents",
+    "brand": "NovaAgents",
+    "tagline": "The AI agent in your Nova wallet",
+    "url": "example.com/agents",
     "disclaimer": "Informational only, not financial advice. You trade at your own risk.",
     "duration": 110
   },

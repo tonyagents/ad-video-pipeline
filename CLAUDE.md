@@ -1,4 +1,4 @@
-# MoonAgents Ads — code-only video pipeline
+# NovaAgents Ads — code-only video pipeline
 
 Efren drops screenshots + context; Claude produces a finished ad video. No video
 editor is ever used — the edit is React (Remotion), the music is synthesized Python.
@@ -15,8 +15,8 @@ Full background: `PLAYBOOK.md`.
     props in TOUR_DEFAULT or a props file): deep-space seeded starfield + purple nebula,
     centered bold intro card (line2 purple), "EVERYTHING, ON COMMAND" eyebrow, app windows
     that fly in through 3D perspective to the LEFT with a big bold caption on the RIGHT, and a
-    centered MoonAgents glyph+wordmark + moonpay.com/agents end card. Replicates the reference
-    `~/Downloads/moonagents-feature-tour.mp4`. Colors: bg #040307, glow #170e2c/#28124e,
+    centered NovaAgents glyph+wordmark + example.com/agents end card. Replicates the reference
+    `~/Downloads/novaagents-feature-tour.mp4`. Colors: bg #040307, glow #170e2c/#28124e,
     purple #b8a8fc, gray #8c869c. Bold sans (no serif). Use this when Efren wants the polished
     "Apple-keynote-in-space" look. Feed it landscape-ish full app-window screenshots.
   - `src/MascotAd.tsx`, `src/DayAd.tsx` — fully code-drawn character ads (no screenshots needed):
@@ -31,34 +31,33 @@ Full background: `PLAYBOOK.md`.
 1. **Ingest screenshots** from `inbox/` or chat paste. If pasted images' temp files are
    gone, recover them from the session transcript jsonl (`~/.claude/projects/-Users-eplasencia/*.jsonl`,
    base64 image blocks).
-2. **PII pass (mandatory)**: crop the MoonAgents sidebar (`crop=iw-430:ih:430:0` on ~1999px-wide
+2. **PII pass (mandatory)**: crop the NovaAgents sidebar (`crop=iw-430:ih:430:0` on ~1999px-wide
    shots) — it shows Efren's email. Read the cropped files to verify visually. Check for other
    PII (wallet addresses, balances Efren wouldn't want public — ask only if genuinely sensitive).
 3. **Write the story**: hook (one-prompt moment) → 6–8 product scenes → end card with
-   `moonpay.com/agents`. Punchy captions; kicker = feature name. Save as `props/<ad-name>.json`.
+   `example.com/agents`. Punchy captions; kicker = feature name. Save as `props/<ad-name>.json`.
 4. **Copy images** to `public/`, prefixed to avoid collisions (e.g. `myad-01.jpg`).
 5. **Music**: reuse `public/music.wav` if duration matches, else regenerate:
    `uv run --system-certs --with numpy --with scipy music/make_music.py --duration <s> --drop <hook-end-s> --out public/<name>.wav`
    (duration = totalFrames/30; drop = hook.duration/30).
 6. **Register in Studio**: add a `<Composition>` for the new ad in `src/Root.tsx` (import the
    props JSON as defaultProps) so Efren can preview/tweak it at localhost:3001.
-7. **Render**: `npx remotion render MoonAgentsAd out/<ad-name>-16x9.mp4 --props=props/<ad-name>.json`
+7. **Render**: `npx remotion render NovaAgentsAd out/<ad-name>-16x9.mp4 --props=props/<ad-name>.json`
    (add `--concurrency=4` if Chrome flakes with "got no response"; needs non-sandboxed shell).
 7. **Verify**: extract 3–4 frames with ffmpeg, Read them, check captions/crops/PII. Then `open` the MP4.
 
-## Moongate brand
-- moongate is a separate MoonPay product (moongate.one): "Every market. One gate." —
-  xStocks (tokenized equities, Apple Pay, on-chain settle) · Tokens · Predictions · Baskets.
-- **Logo mark = two pillars + a downward "moon" sag between the tops** (moon + gate). NOT an
-  "M". Official geometry (assets/brand/moongate-icon.svg): viewBox 0 0 80 80, pillars at
-  x15 & x60 (y36→65), arch `M 15 36 A 22.5 22.5 0 0 0 60 36`, stroke 6.5 round. Accent purple
-  `#8B5CF6` (brand SVG uses `#9333ea`). The MoongateAd Wordmark uses this exact geometry —
-  don't revert to the hand-drawn "M" (it rendered squeezed). Brand assets: assets/brand/
-  moongate-{icon,white,gradient}.svg + moongate-mark-{purple,white-on-black}.png.
+## NovaGate brand (placeholder)
+- novagate is a placeholder second product example (novagate.one): "Every market. One gate." —
+  a fictional stocks/tokens/predictions/baskets app used to demo the `FeatureTour` template
+  with a second brand's colors/copy. `FeatureTour`'s `endCard.mark: 'novagate'` renders a
+  generic abstract gate glyph (not any real trademark) — swap in your own logo geometry.
+  The bespoke second-brand components that used to live here hardcoded a real product's exact
+  logo geometry and were removed for the public release, along with `assets/brand/` and the
+  real screenshots they used.
 
 ## Talking-head walkthroughs (`WalkthroughSpot`)
 - `src/WalkthroughSpot.tsx` — cinematic product-walkthrough engine: full-frame graded
-  talking-head footage as the scene + liquid-glass MoonAgents UI cards that float into the
+  talking-head footage as the scene + liquid-glass NovaAgents UI cards that float into the
   negative space, timed to the spoken word (visionOS/Anthropic-keynote AR look). One
   `props/walk-<feature>.json` per spot (video/kicker/scrim/cards/lowerThirds/endCard). Card
   `kind`s: automations, wallet, buy, virtualAccount, kyc, watchlist, screenshot, note. Cards
@@ -71,17 +70,17 @@ Full background: `PLAYBOOK.md`.
 
 ## Conventions
 - Brand: bg `#08070c`, accent purples `#a78bfa`/`#7D00FF`. Do NOT use the orange `✺` starburst
-  (it's the Claude mark — Efren asked for it to be removed). Use the MoonPay logo instead.
-- **Official MoonPay brand**: purple is exactly `#7D00FF` (sampled from logo). Logos in
-  `assets/brand/` (+ copies in `ad-poker-trainer/public/`):
-  `moonpay-logo-white-on-purple.png` (280×280, for dark/purple backgrounds),
-  `moonpay-logo-purple-on-light.png` (630×630, light backgrounds)
-- End card CTA is always `moonpay.com/agents`
+  (it's the Claude mark — Efren asked for it to be removed). Use the Nova logo instead.
+- **Placeholder Nova brand**: purple is `#7D00FF`. This is a placeholder brand for the public
+  version of this repo — the original's real logo files (`assets/brand/`) were removed; the
+  `FeatureTour`/`WalkthroughSpot` end cards now draw a generic abstract glyph instead. Swap in
+  your own logo file(s) and update the `Img src={staticFile(...)}` calls if you fork this.
+- End card CTA is always `example.com/agents`
 - Keep gambling/trading disclaimers when the source app shows one
 - 16:9 is default; 9:16/1:1 variants need layout variants in Ad.tsx (not built yet)
 - **Style:** props `style: 'dark' | 'mercury'` (default dark). `mercury` = editorial look
   inspired by `references/mercury-command/`: Fraunces serif headlines, IBM Plex Mono kickers,
-  per-scene dark tints (lavender/sky/mint/peach/cool), dot-grid panels, MoonPay purple #7D00FF.
+  per-scene dark tints (lavender/sky/mint/peach/cool), dot-grid panels, Nova purple #7D00FF.
   Fonts (fraunces-600/400.woff2, plexmono-500.woff2) live in public/, loaded via FontFace +
   delayRender in Ad.tsx. Mercury hooks clamp the pan + use a strong scrim (handles WIDE,
   short-at-full-width screenshots cleanly).

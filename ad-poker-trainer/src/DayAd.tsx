@@ -228,7 +228,7 @@ const NotifCard: React.FC<{
     >
       <div style={{display: 'flex', alignItems: 'center', marginBottom: 12}}>
         <div style={{width: 12, height: 12, borderRadius: 6, background: '#7D00FF', marginRight: 10}} />
-        <div style={{fontSize: 21, fontWeight: 700, color: PURPLE}}>MoonAgents</div>
+        <div style={{fontSize: 21, fontWeight: 700, color: PURPLE}}>NovaAgents</div>
         <div style={{marginLeft: 'auto', fontSize: 18, fontWeight: 600, color: SUB}}>{time}</div>
       </div>
       {rows.map((r, i) => (
@@ -281,7 +281,7 @@ const MarketCard: React.FC<{x: number; y: number; frame: number; appear: number;
     >
       <div style={{display: 'flex', alignItems: 'center', marginBottom: 12}}>
         <div style={{width: 12, height: 12, borderRadius: 6, background: '#7D00FF', marginRight: 10}} />
-        <div style={{fontSize: 21, fontWeight: 700, color: PURPLE}}>MoonAgents · edge found</div>
+        <div style={{fontSize: 21, fontWeight: 700, color: PURPLE}}>NovaAgents · edge found</div>
         <div style={{marginLeft: 'auto', fontSize: 18, fontWeight: 600, color: SUB}}>8:04 PM</div>
       </div>
       <div style={{fontSize: 27, fontWeight: 800, color: TEXT}}>Home side to win?</div>
@@ -536,7 +536,7 @@ const HookScene: React.FC<{duration: number}> = ({duration}) => {
           Your wallet, but it works for you.
         </div>
         <div style={{fontSize: 30, fontWeight: 500, color: SUB, marginTop: 12}}>
-          One day with MoonAgents running in the background.
+          One day with NovaAgents running in the background.
         </div>
       </div>
     </AbsoluteFill>
@@ -793,11 +793,11 @@ const END_D = 110;
 export const DAY_TOTAL = HOOK_D + WALK_D + DESK_D + COUCH_D + NIGHT_D + END_D;
 
 const END_CARD = {
-  logo: 'moonpay-logo-white-on-purple.png',
+  logo: 'nova-logo-white-on-purple.png',
   title: 'Put your wallet to work.',
-  brand: 'MoonAgents',
-  tagline: 'The AI agent in your MoonPay wallet',
-  url: 'moonpay.com/agents',
+  brand: 'NovaAgents',
+  tagline: 'The AI agent in your Nova wallet',
+  url: 'example.com/agents',
   disclaimer:
     'Illustrative. Automated features run on your settings. Trading involves risk — not financial advice.',
   duration: END_D,

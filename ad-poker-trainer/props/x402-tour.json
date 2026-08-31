@@ -29,8 +29,8 @@
     }
   ],
   "endCard": {
-    "brand": "MoonAgents",
-    "url": "moonpay.com/agents",
+    "brand": "NovaAgents",
+    "url": "example.com/agents",
     "duration": 100
   },
   "music": "music-x402.wav"

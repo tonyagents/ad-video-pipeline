@@ -15,7 +15,7 @@ import {
   useVideoConfig,
 } from 'remotion';
 
-// MoonPay Agents — MCP connection ad, in the Public.com editorial style:
+// Nova Agents — MCP connection ad, in the Public.com editorial style:
 // purple-tinted blueprint grid, high-contrast SERIF headlines that build line-by-line,
 // a glowing integration pill with a light-sweep, real screenshots full-screen, sans CTA.
 // See references/public-ad/ for the reference.
@@ -110,7 +110,7 @@ const Title: React.FC<{lines: string[]; duration: number}> = ({lines, duration})
   );
 };
 
-// ---- the real Perplexity + MoonPay MCP recording, full-bleed ----
+// ---- the real Perplexity + Nova MCP recording, full-bleed ----
 const Demo: React.FC<{duration: number; recording: string; clientName: string}> = ({duration, recording, clientName}) => {
   const frame = useCurrentFrame();
   const opacity = interpolate(frame, [0, 12, duration - 12, duration], [0, 1, 1, 0], clamp);
@@ -145,7 +145,7 @@ const Demo: React.FC<{duration: number; recording: string; clientName: string}> 
   );
 };
 
-// ---- MCP integration pill: MoonPay <-> Perplexity, with light sweep ----
+// ---- MCP integration pill: Nova <-> Perplexity, with light sweep ----
 const McpPill: React.FC<{duration: number; clientName: string; clientIcon: string; clientGlow: string}> = ({
   duration,
   clientName,
@@ -242,13 +242,13 @@ const McpPill: React.FC<{duration: number; clientName: string; clientIcon: strin
             filter: 'blur(1px)',
           }}
         />
-        {/* MoonPay tile */}
+        {/* Nova tile */}
         <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 18}}>
           {tile(
-            <Img src={staticFile('moonpay-logo-white-on-purple.png')} style={{width: 150, height: 150, borderRadius: 30}} />,
+            <Img src={staticFile('nova-logo-white-on-purple.png')} style={{width: 150, height: 150, borderRadius: 30}} />,
             'rgba(139,92,246,0.45)'
           )}
-          <div style={{fontFamily: SANS, fontSize: 26, fontWeight: 700, color: TEXT}}>MoonPay</div>
+          <div style={{fontFamily: SANS, fontSize: 26, fontWeight: 700, color: TEXT}}>Nova</div>
         </div>
         {/* connection */}
         <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 16, width: 150}}>
@@ -326,7 +326,7 @@ const Cta: React.FC<{duration: number}> = ({duration}) => {
             'inset 0 1.5px 0 rgba(255,255,255,0.5), 0 18px 50px rgba(0,0,0,0.4), 0 0 60px rgba(124,58,237,0.22)',
         }}
       >
-        moonpay.com/agents
+        example.com/agents
       </div>
     </AbsoluteFill>
   );

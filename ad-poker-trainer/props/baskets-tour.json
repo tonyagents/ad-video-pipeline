@@ -4,7 +4,7 @@
     "line2": "narrative.",
     "duration": 100
   },
-  "eyebrow": "MOONGATE BASKETS",
+  "eyebrow": "NOVAGATE BASKETS",
   "scenes": [
     {
       "img": "bk-list.jpg",
@@ -36,9 +36,9 @@
     }
   ],
   "endCard": {
-    "brand": "moongate",
-    "url": "moongate.one",
-    "mark": "moongate",
+    "brand": "novagate",
+    "url": "novagate.one",
+    "mark": "novagate",
     "duration": 100
   },
   "music": "music-baskets-tour.wav"

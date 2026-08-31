@@ -63,7 +63,7 @@ const Phone: React.FC<{frame: number; tap: number; market: Market}> = ({
       {/* header */}
       <circle cx={22} cy={32} r={5} fill="#7D00FF" />
       <text x={33} y={36.5} fontFamily={FONT} fontSize={12} fontWeight={700} fill={PURPLE}>
-        MoonAgents
+        NovaAgents
       </text>
       {/* market question */}
       <text x={16} y={62} fontFamily={FONT} fontSize={13.5} fontWeight={700} fill="#f5f3ff">
@@ -833,11 +833,11 @@ const END_D = 110;
 export const MASCOT_TOTAL = HOOK_D + MX_D + LA_D + TOR_D + TRI_D + END_D;
 
 const END_CARD = {
-  logo: 'moonpay-logo-white-on-purple.png',
+  logo: 'nova-logo-white-on-purple.png',
   title: 'Trade the World Cup.',
-  brand: 'MoonAgents',
-  tagline: 'The AI agent in your MoonPay wallet',
-  url: 'moonpay.com/agents',
+  brand: 'NovaAgents',
+  tagline: 'The AI agent in your Nova wallet',
+  url: 'example.com/agents',
   disclaimer:
     'Prediction markets involve risk. Informational, not financial advice. Fan-made characters — not affiliated with FIFA.',
   duration: END_D,

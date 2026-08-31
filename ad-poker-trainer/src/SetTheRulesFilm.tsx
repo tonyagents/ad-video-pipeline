@@ -13,8 +13,8 @@ import {
 } from 'remotion';
 import {EndCard} from './Ad';
 
-// SET THE RULES — trust/control companion film. Spine: a top-up MoonAgents
-// prepares but a human must approve before any MoonPay-rails execution.
+// SET THE RULES — trust/control companion film. Spine: a top-up NovaAgents
+// prepares but a human must approve before any Nova-rails execution.
 // 0-3s balance watch -> 3-6s prepared -> 6-8s ready/pause -> 8-9.2s approve ->
 // 9.2-12.2s topped up -> 12.2-16.2s daily summary -> 16.2-22.7s end card.
 // 22.7s total @ 30fps = 681 frames.
@@ -75,7 +75,7 @@ const Glass: React.FC<{children: React.ReactNode; width?: number; style?: React.
 
 const HelmetBadge: React.FC<{size?: number}> = ({size = 34}) => (
   <div style={{width: size, height: size, borderRadius: size * 0.3, overflow: 'hidden', flexShrink: 0}}>
-    <Img src={staticFile('moonagents-helmet-icon.png')} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+    <Img src={staticFile('novaagents-helmet-icon.png')} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
   </div>
 );
 
@@ -154,7 +154,7 @@ const Prepared: React.FC = () => {
           <Glass>
             <CardHeader title="Balance Watch" kicker="Human approval required" />
             <div style={{fontSize: 26, fontWeight: 800, marginBottom: 8}}>I&rsquo;ve prepared a $50 top-up</div>
-            <div style={{fontSize: 15, color: GRAY}}>USDC · via MoonPay</div>
+            <div style={{fontSize: 15, color: GRAY}}>USDC · via Nova</div>
           </Glass>
         </div>
       </AbsoluteFill>
@@ -327,12 +327,12 @@ export const SetTheRulesFilm: React.FC = () => {
         </Sequence>
         <EndCard
           endCard={{
-            logo: 'moonpay-logo-white-on-purple.png',
+            logo: 'nova-logo-white-on-purple.png',
             title: 'Your agent keeps watch.',
-            brand: 'MoonAgents',
+            brand: 'NovaAgents',
             tagline: 'You decide when money moves.',
-            url: 'moonpay.com/agents',
-            disclaimer: 'Every MoonPay-rails action requires your approval.',
+            url: 'example.com/agents',
+            disclaimer: 'Every Nova-rails action requires your approval.',
             duration: 195,
           }}
         />

@@ -13,10 +13,10 @@ import {
   useVideoConfig,
 } from 'remotion';
 
-// ── Replicates the MoonAgents "feature tour" reference: deep-space starfield,
+// ── Replicates the NovaAgents "feature tour" reference: deep-space starfield,
 // centered bold intro card, an "EVERYTHING, ON COMMAND" eyebrow, app windows that
 // fly in through 3D space to the left with a big caption on the right, and a
-// centered MoonAgents logo lockup to close. ──────────────────────────────────
+// centered NovaAgents logo lockup to close. ──────────────────────────────────
 
 const FONT =
   "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif";
@@ -45,7 +45,7 @@ export const tourSchema = z.object({
   endCard: z.object({
     brand: z.string(),
     url: z.string(),
-    mark: z.enum(['moonpay', 'moongate']).optional(),
+    mark: z.enum(['nova', 'novagate']).optional(),
     duration: z.number().int().min(30),
   }),
   music: z.string(),
@@ -54,7 +54,7 @@ export const tourSchema = z.object({
 export type TourProps = z.infer<typeof tourSchema>;
 
 export const TOUR_DEFAULT: TourProps = {
-  intro: {line1: 'All of MoonAgents,', line2: 'on command.', duration: 100},
+  intro: {line1: 'All of NovaAgents,', line2: 'on command.', duration: 100},
   eyebrow: 'EVERYTHING, ON COMMAND',
   scenes: [
     {img: 'sc-hook.png', title: 'Just ask.', sub: 'in plain English', focusY: '50%', duration: 120},
@@ -62,7 +62,7 @@ export const TOUR_DEFAULT: TourProps = {
     {img: 'sc-leaderboard.png', title: 'Find smart money.', sub: 'in real time', focusY: '12%', duration: 120},
     {img: '03-table.jpg', title: 'Or just play.', sub: 'a real app, in seconds', focusY: '15%', duration: 120},
   ],
-  endCard: {brand: 'MoonAgents', url: 'moonpay.com/agents', duration: 100},
+  endCard: {brand: 'NovaAgents', url: 'example.com/agents', duration: 100},
   music: 'music-tour.wav',
 };
 
@@ -304,21 +304,25 @@ const LogoLockup: React.FC<{endCard: TourProps['endCard']}> = ({endCard}) => {
           transform: `scale(${0.92 + p * 0.08})`,
         }}
       >
-        {endCard.mark === 'moongate' ? (
-          /* official moongate gate mark: two pillars + downward moon-sag */
+        {endCard.mark === 'novagate' ? (
+          /* generic placeholder "gate" glyph — swap for your own mark */
           <svg width={84} height={58} viewBox="11.5 32.5 52 36" fill="none">
-            <g stroke={PURPLE} strokeWidth={6.5} strokeLinecap="round" fill="none">
-              <line x1="15" y1="65" x2="15" y2="36" />
-              <path d="M 15 36 A 22.5 22.5 0 0 0 60 36" />
-              <line x1="60" y1="36" x2="60" y2="65" />
+            <g stroke={PURPLE} strokeWidth={6.5} strokeLinecap="round" strokeLinejoin="round" fill="none">
+              <path d="M 15 65 L 15 40 L 37.5 32.5 L 60 40 L 60 65" />
             </g>
           </svg>
         ) : (
-          /* MoonPay glyph: big circle + small circle */
-          <div style={{position: 'relative', width: 66, height: 66}}>
-            <div style={{position: 'absolute', left: 0, bottom: 0, width: 52, height: 52, borderRadius: '50%', backgroundColor: '#fff'}} />
-            <div style={{position: 'absolute', right: 0, top: 0, width: 24, height: 24, borderRadius: '50%', backgroundColor: '#fff'}} />
-          </div>
+          /* generic placeholder glyph — swap for your own logo */
+          <div
+            style={{
+              position: 'relative',
+              width: 60,
+              height: 60,
+              borderRadius: 16,
+              border: `6.5px solid ${PURPLE}`,
+              boxSizing: 'border-box',
+            }}
+          />
         )}
         <div style={{fontSize: 72, fontWeight: 700, color: TEXT, letterSpacing: -1}}>{endCard.brand}</div>
       </div>

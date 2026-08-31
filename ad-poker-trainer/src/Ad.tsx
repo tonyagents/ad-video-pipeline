@@ -21,7 +21,7 @@ const SERIF = "'Fraunces', Georgia, 'Times New Roman', serif";
 const MONO = "'PlexMono', ui-monospace, 'SF Mono', Menlo, monospace";
 const BG = '#08070c';
 const PURPLE = '#a78bfa';
-const PURPLE_DEEP = '#7D00FF'; // official MoonPay purple
+const PURPLE_DEEP = '#7D00FF'; // official Nova purple
 const TEXT = '#f5f3ff';
 const SUB = '#9d9aa8';
 
@@ -91,7 +91,7 @@ export const DEFAULT_PROPS: AdProps = {
     {
       img: '02-response.jpg',
       kicker: 'No code. No app store.',
-      caption: 'MoonAgents builds it — live.',
+      caption: 'NovaAgents builds it — live.',
       sub: 'Thought for 10 seconds. Shipped a working app.',
       focusY: '0%',
       duration: 110,
@@ -150,9 +150,9 @@ export const DEFAULT_PROPS: AdProps = {
   ],
   endCard: {
     title: 'Build anything.',
-    brand: 'MoonAgents',
-    tagline: 'The AI agent in your MoonPay wallet',
-    url: 'moonpay.com/agents',
+    brand: 'NovaAgents',
+    tagline: 'The AI agent in your Nova wallet',
+    url: 'example.com/agents',
     disclaimer: 'Practice trainer for learning. Educational, not gambling advice.',
     duration: 110,
   },

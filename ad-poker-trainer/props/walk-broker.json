@@ -12,7 +12,7 @@
       "until": 34.75,
       "width": 360,
       "title": "Your agents",
-      "subtitle": "the ones that power MoonPay",
+      "subtitle": "the ones that power Nova",
       "body": "Claude · Codex walk you through your very first buy."
     },
     {
@@ -32,7 +32,7 @@
       "at": 51.55,
       "width": 392,
       "title": "Buy any crypto",
-      "subtitle": "funded with MoonPay"
+      "subtitle": "funded with Nova"
     }
   ],
   "lowerThirds": [
@@ -43,6 +43,6 @@
   "endCard": {
     "at": 62.8,
     "headline": "A broker on your computer.",
-    "url": "moonpay.com/agents"
+    "url": "example.com/agents"
   }
 }
